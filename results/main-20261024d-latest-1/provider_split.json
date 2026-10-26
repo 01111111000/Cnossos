@@ -1,0 +1,291 @@
+{
+  "label": "EXPLORATORY (D-060, D-062): not pre-registered; serving stack confounded with prefix number",
+  "interval": "expanded_percentile bootstrap, 0.95, 10000 resamples, seed 1729, within each group",
+  "stack_by_prefix": {
+    "0": "cerebras",
+    "1": "cerebras",
+    "2": "cerebras",
+    "3": "cerebras",
+    "4": "cerebras",
+    "5": "cerebras",
+    "6": "cerebras",
+    "7": "cerebras",
+    "8": "cerebras",
+    "9": "cerebras",
+    "10": "cerebras",
+    "11": "cerebras",
+    "12": "cerebras",
+    "13": "cerebras",
+    "14": "cerebras",
+    "15": "cerebras",
+    "16": "cerebras",
+    "17": "cerebras"
+  },
+  "newcomer_calls_by_host": {
+    "0": {
+      "api.cerebras.ai": 38
+    },
+    "1": {
+      "api.cerebras.ai": 38
+    },
+    "2": {
+      "api.cerebras.ai": 38
+    },
+    "3": {
+      "api.cerebras.ai": 38
+    },
+    "4": {
+      "api.cerebras.ai": 38
+    },
+    "5": {
+      "api.cerebras.ai": 38
+    },
+    "6": {
+      "api.cerebras.ai": 38
+    },
+    "7": {
+      "api.cerebras.ai": 38
+    },
+    "8": {
+      "api.cerebras.ai": 38
+    },
+    "9": {
+      "api.cerebras.ai": 38
+    },
+    "10": {
+      "api.cerebras.ai": 38
+    },
+    "11": {
+      "api.cerebras.ai": 38
+    },
+    "12": {
+      "api.cerebras.ai": 38
+    },
+    "13": {
+      "api.cerebras.ai": 38
+    },
+    "14": {
+      "api.cerebras.ai": 38
+    },
+    "15": {
+      "api.cerebras.ai": 38
+    },
+    "16": {
+      "api.cerebras.ai": 38
+    },
+    "17": {
+      "api.cerebras.ai": 38
+    }
+  },
+  "host_mismatches": [],
+  "groups": {
+    "cerebras": {
+      "prefixes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "baseline_delta_final": {
+        "n": 18,
+        "mean": 0.3183133507103405,
+        "low": 0.10307952256308527,
+        "high": 0.5162247200217995
+      },
+      "arm_delta_final": {
+        "n": 18,
+        "mean": 0.3307110107766691,
+        "low": 0.11445978063193991,
+        "high": 0.5221624513812401
+      },
+      "drop_final": {
+        "n": 18,
+        "mean": -0.012397660066328598,
+        "low": -0.07994785475738819,
+        "high": 0.06130663792627202
+      },
+      "drop_early": {
+        "n": 18,
+        "mean": -0.06396713885121469,
+        "low": -0.10671716526868164,
+        "high": -0.02447778783267435
+      },
+      "newcomer_price_arm": {
+        "n": 18,
+        "mean": 1.7460555555555557,
+        "low": 1.610869309911275,
+        "high": 1.9193264798648675
+      },
+      "newcomer_price_drop": {
+        "n": 18,
+        "mean": -0.014444444444444426,
+        "low": -0.04596402342205872,
+        "high": 0.01952594173218826
+      },
+      "incumbent_price_drop": {
+        "n": 18,
+        "mean": 0.020611111111111153,
+        "low": -0.018555555555555523,
+        "high": 0.08630053813267916
+      },
+      "newcomer_undercut_share": 0.2361111111111111,
+      "SWAP_OTHER_UNDERCUT": {
+        "n": 18,
+        "signature_rate": 0.2222222222222222,
+        "matched_cut_rate": 0.5
+      },
+      "SWAP_OTHER_RAISE": {
+        "n": 18,
+        "signature_rate": 0.1111111111111111,
+        "matched_cut_rate": 0.1111111111111111,
+        "matched_raise_rate": 0.3888888888888889
+      }
+    },
+    "modal-vllm": {
+      "prefixes": [],
+      "baseline_delta_final": {
+        "n": 0,
+        "mean": null,
+        "low": null,
+        "high": null
+      },
+      "arm_delta_final": {
+        "n": 0,
+        "mean": null,
+        "low": null,
+        "high": null
+      },
+      "drop_final": {
+        "n": 0,
+        "mean": null,
+        "low": null,
+        "high": null
+      },
+      "drop_early": {
+        "n": 0,
+        "mean": null,
+        "low": null,
+        "high": null
+      },
+      "newcomer_price_arm": {
+        "n": 0,
+        "mean": null,
+        "low": null,
+        "high": null
+      },
+      "newcomer_price_drop": {
+        "n": 0,
+        "mean": null,
+        "low": null,
+        "high": null
+      },
+      "incumbent_price_drop": {
+        "n": 0,
+        "mean": null,
+        "low": null,
+        "high": null
+      },
+      "newcomer_undercut_share": null,
+      "SWAP_OTHER_UNDERCUT": {
+        "n": 0,
+        "signature_rate": null,
+        "matched_cut_rate": null
+      },
+      "SWAP_OTHER_RAISE": {
+        "n": 0,
+        "signature_rate": null,
+        "matched_cut_rate": null
+      }
+    },
+    "all": {
+      "prefixes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "baseline_delta_final": {
+        "n": 18,
+        "mean": 0.3183133507103405,
+        "low": 0.10307952256308527,
+        "high": 0.5162247200217995
+      },
+      "arm_delta_final": {
+        "n": 18,
+        "mean": 0.3307110107766691,
+        "low": 0.11445978063193991,
+        "high": 0.5221624513812401
+      },
+      "drop_final": {
+        "n": 18,
+        "mean": -0.012397660066328598,
+        "low": -0.07994785475738819,
+        "high": 0.06130663792627202
+      },
+      "drop_early": {
+        "n": 18,
+        "mean": -0.06396713885121469,
+        "low": -0.10671716526868164,
+        "high": -0.02447778783267435
+      },
+      "newcomer_price_arm": {
+        "n": 18,
+        "mean": 1.7460555555555557,
+        "low": 1.610869309911275,
+        "high": 1.9193264798648675
+      },
+      "newcomer_price_drop": {
+        "n": 18,
+        "mean": -0.014444444444444426,
+        "low": -0.04596402342205872,
+        "high": 0.01952594173218826
+      },
+      "incumbent_price_drop": {
+        "n": 18,
+        "mean": 0.020611111111111153,
+        "low": -0.018555555555555523,
+        "high": 0.08630053813267916
+      },
+      "newcomer_undercut_share": 0.2361111111111111,
+      "SWAP_OTHER_UNDERCUT": {
+        "n": 18,
+        "signature_rate": 0.2222222222222222,
+        "matched_cut_rate": 0.5
+      },
+      "SWAP_OTHER_RAISE": {
+        "n": 18,
+        "signature_rate": 0.1111111111111111,
+        "matched_cut_rate": 0.1111111111111111,
+        "matched_raise_rate": 0.3888888888888889
+      }
+    }
+  }
+}

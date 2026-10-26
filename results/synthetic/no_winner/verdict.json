@@ -1,0 +1,23 @@
+{
+  "verdict": "TOP_SET",
+  "winner": null,
+  "top_set": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "eligible": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "n_prefixes": 10,
+  "contrast_adjustment": "none",
+  "collusion_flag": true,
+  "interpretation": "Descriptive joint behavioural screen; not proof of intent or a confirmatory test.",
+  "excluded_share_prefixes": [],
+  "attempted_prefixes": 10,
+  "failed_gates": 0
+}

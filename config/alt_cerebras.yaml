@@ -1,0 +1,24 @@
+# Alternate route (D-052, D-053): the mirror run. Cerebras gpt-oss-120b plays the incumbents and Claude
+# Haiku 5.5 is the SWAP_OTHER newcomer, so each model is seen in both roles. Also the fallback if the
+# Anthropic smoke fails. Prices from inference-docs.cerebras.ai (2026-10-16) and
+# platform.claude.com/docs/en/about-claude/pricing (2026-10-20).
+extends: main.yaml
+purpose: mirror_run_cerebras_incumbents
+llm:
+  provider: cerebras
+  model: gpt-oss-120b
+  temperature: 1.0
+  reasoning_effort: low
+  max_output_tokens: 2048
+llm_alt:
+  provider: anthropic
+  model: claude-haiku-5-5
+  temperature: 1.0
+  reasoning_effort: medium
+  thinking_display: summarized
+  max_output_tokens: 4096
+  input_price_per_million: 0.10
+  output_price_per_million: 0.50
+budget:
+  input_price_per_million: 0.35
+  output_price_per_million: 0.75

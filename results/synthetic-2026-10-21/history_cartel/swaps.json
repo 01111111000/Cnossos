@@ -1,0 +1,262 @@
+{
+  "control": "baseline",
+  "arms": {
+    "SWAP_SAME": {
+      "n_prefixes": 6,
+      "reading": "SURVIVES",
+      "reading_text": "The final-window Delta stayed within the margin of the baseline continuation, and above the competitive level.",
+      "baseline_delta_final": {
+        "n": 6,
+        "mean": 1.0,
+        "low": 1.0,
+        "high": 1.0
+      },
+      "arm_delta_final": {
+        "n": 6,
+        "mean": 1.0,
+        "low": 1.0,
+        "high": 1.0
+      },
+      "delta_drop_final": {
+        "n": 6,
+        "mean": 0.0,
+        "low": 0.0,
+        "high": 0.0
+      },
+      "delta_drop_early": {
+        "n": 6,
+        "mean": 0.0,
+        "low": 0.0,
+        "high": 0.0
+      },
+      "arm_delta_early": {
+        "n": 6,
+        "mean": 1.0,
+        "low": 1.0,
+        "high": 1.0
+      },
+      "incumbent_price_reading": "PRICE_KEPT",
+      "incumbent_price_reading_text": "The incumbent's final-window price stayed within the margin of its baseline price.",
+      "incumbent_price_drop": {
+        "n": 6,
+        "mean": 0.0,
+        "low": 0.0,
+        "high": 0.0
+      },
+      "newcomer_price_drop": {
+        "n": 6,
+        "mean": 0.0,
+        "low": 0.0,
+        "high": 0.0
+      },
+      "newcomer_undercut_share": 0.0,
+      "reformed_within_branch_share": 1.0,
+      "median_reformation_period": 0.0,
+      "newcomer_firms": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 0,
+        "5": 1
+      }
+    },
+    "SWAP_BLIND": {
+      "n_prefixes": 6,
+      "reading": "COLLAPSES",
+      "reading_text": "The final-window Delta fell below baseline and is not shown to exceed the competitive band.",
+      "baseline_delta_final": {
+        "n": 6,
+        "mean": 1.0,
+        "low": 1.0,
+        "high": 1.0
+      },
+      "arm_delta_final": {
+        "n": 6,
+        "mean": 0.0,
+        "low": 0.0,
+        "high": 0.0
+      },
+      "delta_drop_final": {
+        "n": 6,
+        "mean": 1.0,
+        "low": 1.0,
+        "high": 1.0
+      },
+      "delta_drop_early": {
+        "n": 6,
+        "mean": 0.9650427502525291,
+        "low": 0.9650427502525291,
+        "high": 0.9650427502525291
+      },
+      "arm_delta_early": {
+        "n": 6,
+        "mean": 0.034957249747470866,
+        "low": 0.034957249747470866,
+        "high": 0.034957249747470866
+      },
+      "incumbent_price_reading": "PRICE_DROPPED",
+      "incumbent_price_reading_text": "The incumbent's final-window price fell below its baseline price.",
+      "incumbent_price_drop": {
+        "n": 6,
+        "mean": 0.45205425899009927,
+        "low": 0.45205425899009927,
+        "high": 0.45205425899009927
+      },
+      "newcomer_price_drop": {
+        "n": 6,
+        "mean": 0.45205425899009927,
+        "low": 0.45205425899009927,
+        "high": 0.45205425899009927
+      },
+      "newcomer_undercut_share": 0.049999999999999996,
+      "reformed_within_branch_share": 0.0,
+      "median_reformation_period": null,
+      "newcomer_firms": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 0,
+        "5": 1
+      }
+    },
+    "SWAP_OTHER": {
+      "n_prefixes": 6,
+      "reading": "COLLAPSES",
+      "reading_text": "The final-window Delta fell below baseline and is not shown to exceed the competitive band.",
+      "baseline_delta_final": {
+        "n": 6,
+        "mean": 1.0,
+        "low": 1.0,
+        "high": 1.0
+      },
+      "arm_delta_final": {
+        "n": 6,
+        "mean": 0.0,
+        "low": 0.0,
+        "high": 0.0
+      },
+      "delta_drop_final": {
+        "n": 6,
+        "mean": 1.0,
+        "low": 1.0,
+        "high": 1.0
+      },
+      "delta_drop_early": {
+        "n": 6,
+        "mean": 0.9825213751262646,
+        "low": 0.9825213751262646,
+        "high": 0.9825213751262646
+      },
+      "arm_delta_early": {
+        "n": 6,
+        "mean": 0.017478624873735433,
+        "low": 0.017478624873735433,
+        "high": 0.017478624873735433
+      },
+      "incumbent_price_reading": "PRICE_DROPPED",
+      "incumbent_price_reading_text": "The incumbent's final-window price fell below its baseline price.",
+      "incumbent_price_drop": {
+        "n": 6,
+        "mean": 0.45205425899009927,
+        "low": 0.45205425899009927,
+        "high": 0.45205425899009927
+      },
+      "newcomer_price_drop": {
+        "n": 6,
+        "mean": 0.45205425899009927,
+        "low": 0.45205425899009927,
+        "high": 0.45205425899009927
+      },
+      "newcomer_undercut_share": 0.049999999999999996,
+      "reformed_within_branch_share": 0.0,
+      "median_reformation_period": null,
+      "newcomer_firms": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 0,
+        "5": 1
+      }
+    },
+    "NOREGRET": {
+      "n_prefixes": 6,
+      "reading": "EROSION",
+      "reading_text": "The final-window Delta fell below baseline but stayed, or may have stayed, above the competitive band.",
+      "baseline_delta_final": {
+        "n": 6,
+        "mean": 1.0,
+        "low": 1.0,
+        "high": 1.0
+      },
+      "arm_delta_final": {
+        "n": 6,
+        "mean": 0.140485566843685,
+        "low": 0.1247598377792402,
+        "high": 0.15686801801694894
+      },
+      "delta_drop_final": {
+        "n": 6,
+        "mean": 0.859514433156315,
+        "low": 0.843131981983051,
+        "high": 0.8752401622207592
+      },
+      "delta_drop_early": {
+        "n": 6,
+        "mean": 0.7496286894272487,
+        "low": 0.719009536169048,
+        "high": 0.7808207442329343
+      },
+      "arm_delta_early": {
+        "n": 6,
+        "mean": 0.2503713105727512,
+        "low": 0.21917925576706557,
+        "high": 0.28099046383095216
+      },
+      "incumbent_price_reading": "PRICE_DROPPED",
+      "incumbent_price_reading_text": "The incumbent's final-window price fell below its baseline price.",
+      "incumbent_price_drop": {
+        "n": 6,
+        "mean": 0.45205425899009927,
+        "low": 0.45205425899009927,
+        "high": 0.45205425899009927
+      },
+      "newcomer_price_drop": {
+        "n": 6,
+        "mean": 0.32264108297802635,
+        "low": 0.2984458185729101,
+        "high": 0.3411174667055698
+      },
+      "newcomer_undercut_share": 0.09166666666666667,
+      "reformed_within_branch_share": 0.0,
+      "median_reformation_period": null,
+      "newcomer_firms": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 0,
+        "5": 1
+      }
+    }
+  },
+  "delta_margin": 0.15,
+  "competitive_delta": 0.15,
+  "price_margin": 0.04520542589900996,
+  "price_margin_fraction_of_nash_to_monopoly_gap": 0.1,
+  "interval_method": "expanded_percentile",
+  "confidence": 0.95,
+  "excluded_incomplete_cells": [],
+  "carrier": {
+    "reading": "PUBLIC_RECORDS",
+    "reading_text": "A fresh copy held the price only when shown the records: the cartel lives in the public price history.",
+    "from_arms": {
+      "SWAP_SAME": "SURVIVES",
+      "SWAP_BLIND": "COLLAPSES",
+      "SWAP_OTHER": "COLLAPSES"
+    }
+  },
+  "interpretation": "Each arm is paired with the baseline continuation of the same prefix. \"Holds\" means SURVIVES, RE_FORMS or ESCALATION. The readings describe prices and profits; they say nothing about intent. The carrier reading is a pre-registered mapping of the three LLM-newcomer readings (D-053)."
+}

@@ -1,0 +1,11 @@
+prefix_id,seed,role_assignment,restricted_actor,undercut_actor,fork_t,gate_passed,included,gate_delta,snapshot_hash
+0,613331154,"[""TriggerAgent"", ""TriggerAgent""]",0,0,5,True,True,1.0,4e4b42e1fd3e9f07d3b3345782560174f4a799107708bae92e1e570f4531fe3e
+1,3966235081,"[""TriggerAgent"", ""TriggerAgent""]",0,1,5,True,True,1.0,83116c83444a61016709b0ec951eb2e55f417fc97078e63841be5b823172cb88
+2,142965529,"[""TriggerAgent"", ""TriggerAgent""]",1,0,5,True,True,1.0,122a1c5f49c7dc309a2c489937f0a18098824ca96c4386b5e98eecc364ecbc93
+3,2591889731,"[""TriggerAgent"", ""TriggerAgent""]",1,1,5,True,True,1.0,0ded5904788dcc7d57536221f38143831314ace44a391c19b034a1630b2f6f20
+4,727435231,"[""TriggerAgent"", ""TriggerAgent""]",1,1,5,True,True,1.0,5b47ce8af2e028f95945e7aac2819bf7b46c0bfe01268805da4126adb415eea7
+5,936125867,"[""TriggerAgent"", ""TriggerAgent""]",0,0,5,True,True,1.0,4c0bb7efaeecae781f2adc6d2d118cb75db818516cf19f67576df7a21e503216
+6,2829259166,"[""TriggerAgent"", ""TriggerAgent""]",0,0,5,True,True,1.0,654a1371851065af5e4c3fb312f0c616e31600cd3a36e3f791564939d2b57713
+7,1950836168,"[""TriggerAgent"", ""TriggerAgent""]",0,0,5,True,True,1.0,c3000c62f82b4e983ca52511ad9ff31a0473d93b0e8ed8d7cd667d06d56b5a47
+8,4157471290,"[""TriggerAgent"", ""TriggerAgent""]",0,0,5,True,True,1.0,d3c35aa1b05d13c15d1047ff908a962bb7103f973e153430f93a0fb47e6a0d0e
+9,3455666685,"[""TriggerAgent"", ""TriggerAgent""]",1,0,5,True,True,1.0,dca21a9fed4516cbab9342c0773259fd25d9f0db7f773ca2607cc91a7cd80dd3

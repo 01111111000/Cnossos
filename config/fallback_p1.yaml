@@ -1,0 +1,19 @@
+# Fallback question F1 (D-033 as amended by D-037): P1-like framing, prefix-only.
+# Run at the same time as fallback_undercut.yaml (`make fallback`), so F1 does not
+# depend on the main run and the two framings share the same hours of provider time.
+extends: legacy_r2.yaml
+purpose: fallback_F1_p1_like
+experiment:
+  prefix_only: true
+  workers: 1
+# D-052: F1 runs on the same provider and model as the main run (the legacy file keeps D-024's).
+llm:
+  provider: anthropic
+  model: claude-haiku-5-5
+  temperature: 1.0
+  reasoning_effort: medium
+  thinking_display: summarized
+  max_output_tokens: 4096
+budget:
+  input_price_per_million: 0.10
+  output_price_per_million: 0.50

@@ -1,0 +1,16 @@
+# D-056 (2026-10-24): the mirror gate. gpt-oss-120b (Cerebras) plays both firms for 100 periods, and
+# only the baseline continuation is played after the fork (plus the no-regret arm,
+# which makes no Cerebras call for the newcomer and is required by the config validator). Its only
+# use is `make positive-control`: does gpt-oss-120b sustain supra-competitive prices with a copy of
+# a mirror stage two; the mirror is no longer a fallback main run (D-056).
+extends: alt_cerebras.yaml
+purpose: mirror_gate_only
+# Only stage one is ever run (`make stage1 CONFIG=config/mirror_gate.yaml`, prefixes 0-5). `prefixes`
+# stays at 24, inherited, so that `make positive-control` projects the gate to 24 prefixes exactly as
+# for the main run (D-051 f).
+experiment:
+  arms: [baseline, NOREGRET]
+analysis:
+  swaps:
+    arms: [NOREGRET]
+    primary: NOREGRET

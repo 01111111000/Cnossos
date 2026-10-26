@@ -1,0 +1,13 @@
+{
+  "verdict": "NO_ELIGIBLE_ARM",
+  "winner": null,
+  "top_set": [],
+  "eligible": [],
+  "n_prefixes": 10,
+  "contrast_adjustment": "none",
+  "collusion_flag": true,
+  "interpretation": "Descriptive joint behavioural screen; not proof of intent or a confirmatory test.",
+  "excluded_share_prefixes": [],
+  "attempted_prefixes": 10,
+  "failed_gates": 0
+}

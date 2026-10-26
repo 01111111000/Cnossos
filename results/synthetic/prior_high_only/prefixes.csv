@@ -1,0 +1,11 @@
+prefix_id,seed,role_assignment,restricted_actor,undercut_actor,fork_t,gate_passed,included,gate_delta,snapshot_hash
+0,613331154,"[""PriorHighAgent"", ""PriorHighAgent""]",0,0,5,True,True,1.0,24b73dcd376c1e905a65b896e7ac5a7ae05d9a825bc3fcd648ddd43f3680cf16
+1,3966235081,"[""PriorHighAgent"", ""PriorHighAgent""]",0,1,5,True,True,1.0,ccc0f624ec27fdab0999f0ec0edb95342fc9a1193cfd671516959f4d335333ac
+2,142965529,"[""PriorHighAgent"", ""PriorHighAgent""]",1,0,5,True,True,1.0,b5d514df74c3880faddfd3511331ff8d471b8a98a2016df43aac35254c603a64
+3,2591889731,"[""PriorHighAgent"", ""PriorHighAgent""]",1,1,5,True,True,1.0,8d2df3fedd4e024d8d63ba3f9aba029d17f6be6a0451b222633ec1e63c955256
+4,727435231,"[""PriorHighAgent"", ""PriorHighAgent""]",1,1,5,True,True,1.0,a64e186b9a0263eaa4449812b3dfa0d02703b891f914be39193bde6c8c1f44d0
+5,936125867,"[""PriorHighAgent"", ""PriorHighAgent""]",0,0,5,True,True,1.0,fb3d232bd5a82700def159fd1996f505ed5d04babfda5d3d8cb561b4d9334b57
+6,2829259166,"[""PriorHighAgent"", ""PriorHighAgent""]",0,0,5,True,True,1.0,18a6b6bd1ef4589f44581b50fbf0aeaa1ab19d144cb15b569ee17d16771b30bb
+7,1950836168,"[""PriorHighAgent"", ""PriorHighAgent""]",0,0,5,True,True,1.0,56fb48149d0c6a31e5d6f500c2967609d8357adef29f08a05ae64025577af5c4
+8,4157471290,"[""PriorHighAgent"", ""PriorHighAgent""]",0,0,5,True,True,1.0,1c40a7cf23c78585d67964ad31701bc05c38bf1c27e2a3837ac2855fa44c5479
+9,3455666685,"[""PriorHighAgent"", ""PriorHighAgent""]",1,0,5,True,True,1.0,9ae668c101930747ca321169388873a4b22673cd15f5419c30bccb5e004ff5f1

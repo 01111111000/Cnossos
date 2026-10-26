@@ -1,0 +1,42 @@
+{
+  "run": "results\\smoke2-20261024",
+  "status": "PASS",
+  "checks": {
+    "valid": true,
+    "carried": true,
+    "truncated": true
+  },
+  "thresholds": {
+    "max_carried": 0.02,
+    "max_truncated": 0.02,
+    "min_valid": 0.95
+  },
+  "decisions": 784,
+  "attempts": 784,
+  "valid_decision_rate": 1.0,
+  "first_attempt_valid_rate": 1.0,
+  "carried_decision_rate": 0.0,
+  "truncated_attempt_rate": 0.0,
+  "failure_kinds": {},
+  "models_reported": [
+    "claude-haiku-5-5",
+    "gpt-oss-120b"
+  ],
+  "finish_reasons": {
+    "end_turn": 724,
+    "stop": 60
+  },
+  "backoffs_total": 11,
+  "mean_prompt_tokens": 2019.688775510204,
+  "mean_completion_tokens": 342.8329081632653,
+  "p95_completion_tokens": 877.0,
+  "mean_reasoning_tokens": 148.56666666666666,
+  "cached_prompt_share": 0.034355667043063316,
+  "mean_provider_seconds": 0.22276214758555093,
+  "estimated_spend_usd": 0.2927341,
+  "rerun_budget_with": "make budget OUTPUT_TOKENS=343",
+  "descriptive_only_prefix_delta": {
+    "0": 0.639,
+    "1": 0.115
+  }
+}

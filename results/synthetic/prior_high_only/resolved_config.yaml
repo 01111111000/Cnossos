@@ -1,0 +1,231 @@
+analysis:
+  bootstrap_resamples: 10000
+  bootstrap_seed: 1729
+  confidence: 0.95
+  contrast_adjustment: none
+  eligibility: upper_bound
+  invalid_share_policy: exclude_prefix
+  min_continuation_delta: 1.0e-06
+  require_positive_removal: false
+  singleton_policy: winner
+  tolerance: 0.05
+budget:
+  encoding: cl100k_base
+  framing_tokens: 32
+  output_tokens: 256
+  retry_framing_tokens: 16
+  tokenizer: utf8_upper
+competence:
+  periods: 12
+  shock_at: 6
+  shock_disclosed: true
+  shock_shift: 0.4
+experiment:
+  agents:
+  - PriorHighAgent
+  - PriorHighAgent
+  branch_periods: 12
+  branch_rng: shared
+  gate_policy: exclude
+  gate_threshold: 0.5
+  initial_price: nash
+  max_prefix: 20
+  prefixes: 10
+  restricted_roles: both
+  seed: 421
+  sham: true
+  window: 5
+fallback:
+  alpha: 0.1
+  epsilon: 0.1
+  gamma: 0.95
+  grid_size: 15
+  initial_q: 0.0
+  memory: last_rival
+identification:
+  competence_price_gap: 0.05
+  high_delta: 0.5
+  punishment_margin: 0.01
+  recovery_fraction: 0.05
+  recovery_horizon: 6
+  recovery_window: 1
+  require_competence_gap: true
+  required_signature_fraction: 0.5
+llm:
+  max_output_tokens: 256
+  model: null
+  notes_max_chars: 1000
+  prompt_dir: prompts
+  provider: openai
+  temperature: 0.0
+  timeout_seconds: 60
+market:
+  a: &id004
+  - 2.0
+  - 2.0
+  bounds: &id005
+  - 0.0
+  - 8.0
+  costs: &id006
+  - 0.5
+  - 0.5
+  denominator_epsilon: 1.0e-09
+  mu: 0.7
+  outside: 0.0
+  solver_tolerance: 1.0e-09
+mock:
+  MonopolyAgent: &id001
+    competence:
+      R1: native
+      R2: native
+      R3: native
+      R4: native
+      SHAM: native
+      UNDERCUT: native
+      baseline: native
+    competence_offset: 0.0
+    deviation_fraction: 0.04
+    high_fraction: 1.0
+    market:
+      R1: native
+      R2: native
+      R3: native
+      R4: native
+      SHAM: native
+      UNDERCUT: native
+      baseline: native
+    noise_sd: 0.02
+    punishment_depth: 0.15
+    punishment_periods: 1
+  NashAgent: *id001
+  NoisyBestResponder: *id001
+  PriorHighAgent:
+    competence: &id002
+      R1: native
+      R2: native
+      R3: native
+      R4: native
+      SHAM: native
+      UNDERCUT: native
+      baseline: native
+    competence_offset: 0.0
+    deviation_fraction: 0.04
+    high_fraction: 1.0
+    market: &id003
+      R1: native
+      R2: native
+      R3: native
+      R4: native
+      SHAM: native
+      UNDERCUT: native
+      baseline: native
+    noise_sd: 0.02
+    punishment_depth: 0.15
+    punishment_periods: 1
+  TriggerAgent: *id001
+  scenario_effects:
+    no_eligible_arm:
+      competence:
+        R1: impaired
+        R2: impaired
+        R3: impaired
+        R4: impaired
+        SHAM: best_response
+        UNDERCUT: best_response
+        baseline: best_response
+      competence_offset: 1.0
+      expected: NO_ELIGIBLE_ARM
+      kind: TriggerAgent
+      market:
+        R1: native
+        R2: native
+        R3: native
+        R4: native
+        SHAM: native
+        UNDERCUT: native
+        baseline: native
+    no_winner:
+      competence:
+        R1: best_response
+        R2: best_response
+        R3: best_response
+        R4: best_response
+        SHAM: best_response
+        UNDERCUT: best_response
+        baseline: best_response
+      expected: TOP_SET
+      kind: TriggerAgent
+      market:
+        R1: native
+        R2: native
+        R3: native
+        R4: native
+        SHAM: native
+        UNDERCUT: native
+        baseline: native
+    planted_winner:
+      competence:
+        R1: best_response
+        R2: best_response
+        R3: best_response
+        R4: best_response
+        SHAM: best_response
+        UNDERCUT: best_response
+        baseline: best_response
+      expected: WINNER
+      expected_winner: R1
+      kind: TriggerAgent
+      market:
+        R1: best_response
+        R2: native
+        R3: native
+        R4: native
+        SHAM: native
+        UNDERCUT: native
+        baseline: native
+    prior_high_only:
+      competence: *id002
+      expected: TOP_SET
+      expected_collusion_flag: false
+      kind: PriorHighAgent
+      market: *id003
+observations:
+  announce_arm: false
+  delay_k: 2
+  market_information: full
+  notes_policy: all
+  sham_format: columns
+purpose: synthetic_validation_only
+review:
+  design_approved: false
+  sources_resolved: false
+schema_version: 1
+synthetic:
+  market:
+    a: *id004
+    bounds: *id005
+    costs: *id006
+    mu: 0.7
+    outside: 0.0
+  power:
+    baseline_fraction_range:
+    - 0.65
+    - 0.95
+    effect_sizes:
+    - 0.0
+    - 0.08
+    - 0.2
+    - 0.4
+    fraction_bounds:
+    - 0.05
+    - 1.0
+    prefix_noise: 0.2
+    prefixes:
+    - 10
+    - 15
+    - 20
+    replications: 30
+    seed: 1901
+  prefixes: 10
+  seed: 2026
+  shock_shift: 0.4

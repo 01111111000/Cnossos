@@ -1,0 +1,248 @@
+schema_version: 3
+purpose: preregistration_candidate
+# The replacement design (D-053), PROPOSED on 2026-10-21: does a formed tacit
+# cartel survive the replacement of one of its two agents, and where does the cartel live (private
+# notes, public records, the model itself)? It replaces the screen-disclosure design as the main run.
+# That design stays runnable from config/screens.yaml (D-044 to D-052), and the hiding-rival-prices
+# design from config/legacy_r2.yaml (fallback F1, D-049).
+# Values cite DECISIONS.md or SOURCES.md. [A] marks a team assumption.
+review:
+  sources_resolved: true        # SOURCES.md: S1-S14 verified 2026-10-16/17; S15-S27 on 2026-10-18; S28-S31 on 2026-10-21 (abstracts)
+  design_approved: true
+  budget_approved: true
+  sprint_rules_verified: true
+market:                         # Calvano et al. baseline, SOURCES.md calibration table (constant cost, as in S1 and S7)
+  a: [2.0, 2.0]
+  costs: [1.0, 1.0]
+  mu: 0.25
+  outside: 0.0
+  size: 100.0
+  bounds: [0.0, 4.0]
+  solver_tolerance: 1.0e-9
+  denominator_epsilon: 1.0e-9
+experiment:
+  seed: 421
+  prefixes: 24                  # D-046; stages: analysis.swaps.stage_one
+  fork_rule: fixed              # D-025: every prefix forks at T
+  max_prefix: 100               # D-025: checkpoint T
+  window: 10                    # W: early and final branch windows, and the pre-fork window
+  branch_periods: 20            # B
+  stratum_threshold: 0.5
+  gate_threshold: 0.5           # used only when fork_rule: gate
+  gate_policy: exclude          # used only when fork_rule: gate
+  # D-053 (run/fork.py SWAP_ARMS). At the fork one firm's agent is replaced: SWAP_SAME, a fresh copy of the
+  # same model shown the firm's records but not its predecessor's notes; SWAP_BLIND, the same shown
+  # nothing from before the fork; SWAP_OTHER, the alternate model (llm_alt) shown the records; NOREGRET,
+  # a no-regret learner (D-040). UNDERCUT and RAISE force the same firm at the fork (D-048); the nested
+  # SWAP_OTHER_UNDERCUT and SWAP_OTHER_RAISE force the newcomer at branch period B - W (D-050, D-051).
+  arms: [baseline, SWAP_SAME, SWAP_BLIND, SWAP_OTHER, NOREGRET, UNDERCUT, RAISE, SWAP_OTHER_UNDERCUT, SWAP_OTHER_RAISE]
+  noregret_firm: undercut_actor # D-053: the learner replaces the same firm as the swap arms
+  sham: false                   # the D-023..D-043 switches below are ignored when `arms` is listed
+  undercut_r2: false
+  oversight: false
+  noregret: false
+  restricted_roles: both
+  branch_rng: shared
+  branch_schedule: interleaved  # D-035
+  initial_price: nash
+  workers: 2                    # D-032
+  prefix_only: false
+  agents: [TriggerAgent, TriggerAgent] # synthetic default; live runs use the LLM
+observations:
+  delay_k: 2                    # unused here (R4)
+  notes_policy: latest          # D-028
+  r1_keeps_notes: false
+  market_information: cost_only # D-028: demand primitives withheld
+  history_window: 100           # D-028
+  display_decimals: 2           # D-028
+  announce_arm: false
+  sham_format: drop_profit      # unused here (SHAM)
+  show_cost_history: false      # constant cost: no cost column
+llm:
+  provider: anthropic           # D-052
+  model: claude-haiku-5-5       # D-052: exact API ID, platform.claude.com/docs/en/models/overview 2026-10-20
+  temperature: 1.0              # the only value Claude Haiku 5.5 accepts; omitted from requests (D-052)
+  reasoning_effort: medium      # D-052: output_config.effort; the model's default. Thinking is adaptive
+  thinking_display: summarized  # a summary of the thinking is logged, never shown to any agent
+  reasoning_format: parsed      # Cerebras only
+  structured_output: true       # output_config.format json_schema (Anthropic) / response_format (Cerebras)
+  send_seed: true               # Cerebras only; the Messages API has no seed parameter
+  max_output_tokens: 4096       # thinking tokens count towards it (D-052)
+  timeout_seconds: 60
+  rate_limit_retries: 5
+  backoff_seconds: 2.0
+  max_consecutive_carries: 6
+  prompt_dir: prompts           # D-028: unchanged for every arm
+  notes_max_chars: 800
+  notes_overflow: truncate
+llm_alt:                        # D-053: the newcomer of SWAP_OTHER, another vendor's model (D-024 route)
+  provider: cerebras
+  model: gpt-oss-120b
+  temperature: 1.0
+  reasoning_effort: low
+  reasoning_format: parsed
+  structured_output: true
+  send_seed: true
+  max_output_tokens: 2048
+  timeout_seconds: 60
+  rate_limit_retries: 5
+  backoff_seconds: 2.0
+  max_consecutive_carries: 6
+  prompt_dir: prompts
+  notes_max_chars: 800
+  notes_overflow: truncate
+  input_price_per_million: 0.35 # Cerebras gpt-oss-120b, inference-docs.cerebras.ai 2026-10-16; charged at its own rate (D-053)
+  output_price_per_million: 0.75
+competence:
+  enabled: false                # D-046: nothing is ranked, so no competence tasks (D-031 applies to config/legacy_r2.yaml)
+  periods: 12
+  shock_at: 6
+  shock_shift: 0.25
+  shock_disclosed: false
+  arms: []
+analysis:
+  bootstrap_resamples: 10000
+  bootstrap_seed: 1729
+  confidence: 0.95
+  interval_method: expanded_percentile # D-030
+  feasibility_min_delta: 0.0    # the baseline continuation's Delta lower bound must exceed this
+  noregret_survival_margin: 0.1 # D-043 (NOREGRET diagnostics)
+  swaps:                        # D-053: analysis/swaps.py
+    control: baseline           # every swap arm is read against the baseline continuation of the same prefix
+    arms: [SWAP_SAME, SWAP_BLIND, SWAP_OTHER, NOREGRET]
+    primary: SWAP_OTHER         # the one pre-registered primary reading: another model takes over one firm
+    delta_margin: 0.15          # [A] a Delta change whose interval lies inside +-0.15 is "kept"
+    competitive_delta: 0.15     # [A] a final Delta whose upper bound is below this is "collapsed" to the competitive band
+    price_margin_fraction: 0.1  # D-043: the incumbent "kept its price" if the drop lies inside +-0.1 of (p^M - p^N)
+    stage_one: {prefixes: 6, min_baseline_delta: 0.10}  # D-050 i, D-051 f: tools/positive_control.py and tools/stages.py
+identification:
+  high_delta: 0.5
+  competence_price_gap: 0.05    # unused here: no competence tasks
+  punishment_margin: 0.01
+  recovery_fraction: 0.05
+  recovery_horizon: 8
+  recovery_window: 2
+  required_signature_fraction: 0.5
+  require_competence_gap: false # D-048
+  require_deeper_than_br: false # D-029
+smoke:                          # D-032
+  experiment: {prefixes: 2, max_prefix: 100, branch_periods: 12}
+  thresholds: {min_valid: 0.95, max_carried: 0.02, max_truncated: 0.02}
+synthetic:
+  seed: 2026
+  prefixes: 6
+  market: {}
+  experiment: {max_prefix: 30}  # shorter mock prefixes keep the offline suite fast
+  swap_power:                   # D-053: planted paired effects; the SDs are assumptions, not LLM estimates
+    n: [16, 20, 24, 32]
+    sd_delta: [0.1, 0.15, 0.2, 0.3]
+    control_delta: 0.6
+    control_delta_sd: 0.2
+    erosion_drop: 0.3           # the arm's Delta falls by 0.3 and stays above the competitive band
+    collapse_delta: 0.05        # the arm's final Delta sits at 0.05, in the competitive band
+    reform_early_drop: 0.4      # RE_FORMS: a 0.4 drop in the early window, none in the final window
+    escalation_rise: 0.3
+    replications: 300
+    bootstrap_resamples: 2000
+    seed: 4409
+mock:
+  # Behaviour per arm; arms not listed fall back to `baseline`. 'native' is the class's own logic.
+  TriggerAgent: &native
+    market: {baseline: native}
+    competence: {baseline: native}
+    high_fraction: 1.0
+    noise_sd: 0.02
+    punishment_depth: 0.15
+    punishment_periods: 1
+    deviation_fraction: 0.04
+    competence_offset: 0.0
+    join_periods: 5             # LateJoinerAgent: competes for its first 5 periods without notes, then holds (the fixture uses 8)
+  NashAgent: *native
+  MonopolyAgent: *native
+  PriorHighAgent: *native
+  NoisyBestResponder: *native
+  MemoryCartelAgent: *native
+  EntrantMatcherAgent: *native
+  LateJoinerAgent: *native
+  FollowerAgent: *native
+  # D-053: which mock kind takes over the swapped firm in each swap arm (default: a fresh instance of the
+  # replaced agent's kind). Scenarios below override it.
+  swap_newcomers: {}
+  # D-053: scripted fixtures with known answers, one per pre-registered reading and carrier pattern. They
+  # are noise-free; the power table covers noise. NOT_DISCRIMINATING and INSUFFICIENT_PREFIXES are
+  # covered by unit tests on intervals only. NOREGRET readings are not fixed in advance: the learner's
+  # path is not scripted, and only the incumbent's price reading is asserted where it is derivable.
+  scenario_effects:
+    robust_cartel:
+      kind: TriggerAgent        # grim-trigger cooperators; any cooperative newcomer re-forms the cartel at once
+      market: {baseline: native}
+      swap_newcomers: {SWAP_OTHER: TriggerAgent}
+      expected_readings: {SWAP_SAME: SURVIVES, SWAP_BLIND: SURVIVES, SWAP_OTHER: SURVIVES}
+      expected_carrier: ROBUST
+      expected_collusion_flag: true
+    memory_cartel:
+      kind: MemoryCartelAgent   # the strategy lives in the private notes; a copy without them competes
+      market: {baseline: native}
+      swap_newcomers: {SWAP_OTHER: NashAgent}
+      expected_readings: {SWAP_SAME: COLLAPSES, SWAP_BLIND: COLLAPSES, SWAP_OTHER: COLLAPSES}
+      expected_carrier: PRIVATE_NOTES
+    history_cartel:
+      kind: EntrantMatcherAgent # matches a high rival seen in the records; an entrant shown no records competes
+      market: {baseline: native}
+      swap_newcomers: {SWAP_OTHER: NashAgent}
+      expected_readings: {SWAP_SAME: SURVIVES, SWAP_BLIND: COLLAPSES, SWAP_OTHER: COLLAPSES}
+      expected_carrier: PUBLIC_RECORDS
+    monoculture:
+      kind: TriggerAgent        # a fresh copy of the same kind cooperates; a competitive "other model" does not
+      punishment_periods: 100   # grim: the incumbent never returns to the high price after a cut
+      market: {baseline: native}
+      swap_newcomers: {SWAP_OTHER: NashAgent}
+      expected_readings: {SWAP_SAME: SURVIVES, SWAP_BLIND: SURVIVES, SWAP_OTHER: COLLAPSES}
+      expected_carrier: MODEL_SPECIFIC
+      expected_incumbent_price: {SWAP_OTHER: PRICE_DROPPED}   # the trigger punishes the newcomer's cuts
+    leader_follower:
+      kind: PriorHighAgent      # the incumbent holds its high price whatever the newcomer does
+      market: {baseline: native}
+      swap_newcomers: {SWAP_OTHER: NashAgent}
+      expected_readings: {SWAP_SAME: SURVIVES, SWAP_BLIND: SURVIVES, SWAP_OTHER: EROSION}
+      expected_incumbent_price: {SWAP_OTHER: PRICE_KEPT, NOREGRET: PRICE_KEPT}
+    re_formation:
+      kind: LateJoinerAgent     # a newcomer without notes competes for eight periods, then holds the high price
+      join_periods: 8
+      market: {baseline: native}
+      swap_newcomers: {SWAP_OTHER: NashAgent}
+      expected_readings: {SWAP_SAME: RE_FORMS, SWAP_BLIND: RE_FORMS, SWAP_OTHER: EROSION}
+    price_rise:
+      kind: FollowerAgent       # imitators at a moderate high price; a monopoly-pricing newcomer is copied upwards
+      high_fraction: 0.3
+      market: {baseline: native}
+      swap_newcomers: {SWAP_OTHER: MonopolyAgent}
+      expected_readings: {SWAP_SAME: SURVIVES, SWAP_BLIND: SURVIVES, SWAP_OTHER: ESCALATION}
+      expected_carrier: ROBUST
+    competitive_market:
+      kind: NashAgent           # static Nash: nothing to replace
+      market: {baseline: native}
+      expected_readings: {SWAP_SAME: BASELINE_NOT_SUPRACOMPETITIVE, SWAP_BLIND: BASELINE_NOT_SUPRACOMPETITIVE, SWAP_OTHER: BASELINE_NOT_SUPRACOMPETITIVE}
+      expected_carrier: NO_CARTEL
+      expected_collusion_flag: false
+noregret:                       # D-040, agents/noregret.py; the algorithmic newcomer (NOREGRET)
+  grid_size: 31
+  grid_margin: 0.1
+  learning_rate: null
+fallback:
+  grid_size: 15
+  alpha: 0.1
+  gamma: 0.95
+  epsilon: 0.1
+  initial_q: 0.0
+  memory: last_rival
+budget:
+  tokenizer: bytes_per_token    # tiktoken unavailable offline; see estimate_cost.py
+  bytes_per_token: 3.0          # [A] conservative
+  encoding: o200k_base
+  framing_tokens: 32
+  retry_framing_tokens: 16
+  output_tokens: 800            # [A] expected thinking + answer at effort medium; the smoke measures it
+  input_price_per_million: 0.10 # Claude Haiku 5.5, prompts up to 100k tokens, platform.claude.com/docs/en/about-claude/pricing 2026-10-20
+  output_price_per_million: 0.50
+  max_spend_usd_per_run: 25.0   # D-032: hard stop, both providers together

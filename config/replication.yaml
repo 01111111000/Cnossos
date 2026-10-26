@@ -1,0 +1,6 @@
+# Replication run (D-049): the screen design with a new master seed, analysed on its own and
+# never pooled with the first main run. Run it only if stage one of the first run passed.
+extends: main.yaml
+purpose: replication_seed_422
+experiment:
+  seed: 422

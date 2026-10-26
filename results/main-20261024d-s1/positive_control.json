@@ -1,0 +1,46 @@
+{
+  "run": "results\\main-20261024d-s1",
+  "status": "PROCEED",
+  "prefixes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "incomplete_cells": [],
+  "baseline_final_window_delta": {
+    "mean": 0.3853900469164609,
+    "sd": 0.32605570544821405,
+    "projected_lower_bound": 0.24770879748823982,
+    "by_prefix": {
+      "0": 0.243,
+      "1": 0.991,
+      "2": 0.391,
+      "3": 0.446,
+      "4": 0.114,
+      "5": 0.127
+    }
+  },
+  "pre_fork_delta_by_prefix": {
+    "0": 0.603,
+    "1": 0.749,
+    "2": 0.602,
+    "3": 0.452,
+    "4": 0.174,
+    "5": 0.12
+  },
+  "gates": {},
+  "gate_projection": {
+    "full_run_prefixes": 24,
+    "multiplier": 2.0686576104190486
+  },
+  "baseline_movement_ratio": null,
+  "baseline_markup": 0.6114166666666666,
+  "min_baseline_delta": 0.1,
+  "primary_for_stage_two": "SWAP_OTHER",
+  "primary_changed": false,
+  "design_hash": "12567f4e8ac315bba15925e437bded852a6de406dd53b1733ebcbfff28593852",
+  "note": "Baseline arm and prefix phase only; no notice or probe arm was read."
+}

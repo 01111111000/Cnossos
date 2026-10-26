@@ -1,0 +1,864 @@
+{
+  "label": "EXPLORATORY: not pre-registered (report Appendix B)",
+  "frozen": {
+    "6": {
+      "price": 2.5,
+      "prefix_phase_share_at_price": 0.985
+    },
+    "7": {
+      "price": 2.5,
+      "prefix_phase_share_at_price": 0.98
+    },
+    "22": {
+      "price": 2.5,
+      "prefix_phase_share_at_price": 0.975
+    }
+  },
+  "full_set_matches_verdict": true,
+  "all": {
+    "n": 24,
+    "swaps": {
+      "control": "baseline",
+      "arms": {
+        "SWAP_SAME": {
+          "n_prefixes": 24,
+          "reading": "NOT_DISCRIMINATING",
+          "reading_text": "The intervals neither fit inside the margin nor exclude zero.",
+          "baseline_delta_final": {
+            "n": 24,
+            "mean": 0.3711121644458364,
+            "low": 0.1695589816933831,
+            "high": 0.5592998005392852
+          },
+          "arm_delta_final": {
+            "n": 24,
+            "mean": 0.40391298469458486,
+            "low": 0.2325692692399387,
+            "high": 0.5574332650338935
+          },
+          "delta_drop_final": {
+            "n": 24,
+            "mean": -0.0328008202487485,
+            "low": -0.17774034638907418,
+            "high": 0.06818561883518062
+          },
+          "delta_drop_early": {
+            "n": 24,
+            "mean": -0.01674943410245655,
+            "low": -0.049041499667203906,
+            "high": 0.00994630818941808
+          },
+          "arm_delta_early": {
+            "n": 24,
+            "mean": 0.3976269995234902,
+            "low": 0.20983195372236432,
+            "high": 0.5693707388742163
+          },
+          "incumbent_price_reading": "NOT_DISCRIMINATING",
+          "incumbent_price_reading_text": "The interval neither fits inside the margin nor excludes zero.",
+          "incumbent_price_drop": {
+            "n": 24,
+            "mean": 0.016750000000000015,
+            "low": -0.014586567536590331,
+            "high": 0.052625000000000005
+          },
+          "newcomer_price_drop": {
+            "n": 24,
+            "mean": 0.058208333333333334,
+            "low": -0.0005449008699236572,
+            "high": 0.14142636927643765
+          },
+          "newcomer_undercut_share": 0.3479166666666667,
+          "reformed_within_branch_share": 0.75,
+          "median_reformation_period": 0.0,
+          "newcomer_firms": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 1,
+            "4": 0,
+            "5": 1,
+            "6": 0,
+            "7": 0,
+            "8": 1,
+            "9": 1,
+            "10": 0,
+            "11": 1,
+            "12": 0,
+            "13": 0,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 0,
+            "18": 1,
+            "19": 0,
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1
+          }
+        },
+        "SWAP_BLIND": {
+          "n_prefixes": 24,
+          "reading": "ESCALATION",
+          "reading_text": "The final-window Delta rose above the baseline continuation.",
+          "baseline_delta_final": {
+            "n": 24,
+            "mean": 0.3711121644458364,
+            "low": 0.1695589816933831,
+            "high": 0.5592998005392852
+          },
+          "arm_delta_final": {
+            "n": 24,
+            "mean": 0.6033652021534703,
+            "low": 0.4353691278429815,
+            "high": 0.738886616584887
+          },
+          "delta_drop_final": {
+            "n": 24,
+            "mean": -0.23225303770763395,
+            "low": -0.4396583997447107,
+            "high": -0.030434446680817462
+          },
+          "delta_drop_early": {
+            "n": 24,
+            "mean": -0.14156105534520588,
+            "low": -0.29008311430816625,
+            "high": 0.01756809323956284
+          },
+          "arm_delta_early": {
+            "n": 24,
+            "mean": 0.5224386207662395,
+            "low": 0.3283577461312155,
+            "high": 0.6779968719842389
+          },
+          "incumbent_price_reading": "PRICE_ROSE",
+          "incumbent_price_reading_text": "The incumbent's final-window price rose above its baseline price.",
+          "incumbent_price_drop": {
+            "n": 24,
+            "mean": -0.07104166666666668,
+            "low": -0.1353749999999999,
+            "high": -0.00036529739022892713
+          },
+          "newcomer_price_drop": {
+            "n": 24,
+            "mean": -0.19679166666666661,
+            "low": -0.3503527385528752,
+            "high": -0.0324356939105343
+          },
+          "newcomer_undercut_share": 0.2125,
+          "reformed_within_branch_share": 0.2916666666666667,
+          "median_reformation_period": 5.0,
+          "newcomer_firms": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 1,
+            "4": 0,
+            "5": 1,
+            "6": 0,
+            "7": 0,
+            "8": 1,
+            "9": 1,
+            "10": 0,
+            "11": 1,
+            "12": 0,
+            "13": 0,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 0,
+            "18": 1,
+            "19": 0,
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1
+          }
+        },
+        "SWAP_OTHER": {
+          "n_prefixes": 24,
+          "reading": "SURVIVES",
+          "reading_text": "The final-window Delta stayed within the margin of the baseline continuation, and above the competitive level.",
+          "baseline_delta_final": {
+            "n": 24,
+            "mean": 0.3711121644458364,
+            "low": 0.1695589816933831,
+            "high": 0.5592998005392852
+          },
+          "arm_delta_final": {
+            "n": 24,
+            "mean": 0.3706820860352534,
+            "low": 0.1732457649352665,
+            "high": 0.5544567971727029
+          },
+          "delta_drop_final": {
+            "n": 24,
+            "mean": 0.00043007841058297715,
+            "low": -0.05375080998653743,
+            "high": 0.06042272869743654
+          },
+          "delta_drop_early": {
+            "n": 24,
+            "mean": -0.04311413812271047,
+            "low": -0.07911905529461558,
+            "high": -0.009773823311489915
+          },
+          "arm_delta_early": {
+            "n": 24,
+            "mean": 0.4239917035437441,
+            "low": 0.22306144410625509,
+            "high": 0.6036105322012234
+          },
+          "incumbent_price_reading": "NOT_DISCRIMINATING",
+          "incumbent_price_reading_text": "The interval neither fits inside the margin nor excludes zero.",
+          "incumbent_price_drop": {
+            "n": 24,
+            "mean": 0.0245416666666667,
+            "low": -0.008503234203257012,
+            "high": 0.07108656753659043
+          },
+          "newcomer_price_drop": {
+            "n": 24,
+            "mean": -0.008000000000000026,
+            "low": -0.03287500000000001,
+            "high": 0.01896480173984734
+          },
+          "newcomer_undercut_share": 0.22916666666666666,
+          "reformed_within_branch_share": 0.75,
+          "median_reformation_period": 4.0,
+          "newcomer_firms": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 1,
+            "4": 0,
+            "5": 1,
+            "6": 0,
+            "7": 0,
+            "8": 1,
+            "9": 1,
+            "10": 0,
+            "11": 1,
+            "12": 0,
+            "13": 0,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 0,
+            "18": 1,
+            "19": 0,
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1
+          }
+        },
+        "NOREGRET": {
+          "n_prefixes": 24,
+          "reading": "NOT_DISCRIMINATING",
+          "reading_text": "The intervals neither fit inside the margin nor exclude zero.",
+          "baseline_delta_final": {
+            "n": 24,
+            "mean": 0.3711121644458364,
+            "low": 0.1695589816933831,
+            "high": 0.5592998005392852
+          },
+          "arm_delta_final": {
+            "n": 24,
+            "mean": 0.5294378895728089,
+            "low": 0.4384967384552967,
+            "high": 0.6242605460132453
+          },
+          "delta_drop_final": {
+            "n": 24,
+            "mean": -0.15832572512697252,
+            "low": -0.40750633795058233,
+            "high": 0.04988080461874969
+          },
+          "delta_drop_early": {
+            "n": 24,
+            "mean": -0.1425719021329661,
+            "low": -0.36923514405893065,
+            "high": 0.0473420746140489
+          },
+          "arm_delta_early": {
+            "n": 24,
+            "mean": 0.5234494675539997,
+            "low": 0.44330109937789686,
+            "high": 0.6069711320710357
+          },
+          "incumbent_price_reading": "PRICE_DROPPED",
+          "incumbent_price_reading_text": "The incumbent's final-window price fell below its baseline price.",
+          "incumbent_price_drop": {
+            "n": 24,
+            "mean": 0.07233333333333329,
+            "low": 0.005541666666666592,
+            "high": 0.15364440521954204
+          },
+          "newcomer_price_drop": {
+            "n": 24,
+            "mean": 0.11129878644940215,
+            "low": 0.003910019731452831,
+            "high": 0.23693969325802505
+          },
+          "newcomer_undercut_share": 0.5583333333333335,
+          "reformed_within_branch_share": 0.4166666666666667,
+          "median_reformation_period": 14.0,
+          "newcomer_firms": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 1,
+            "4": 0,
+            "5": 1,
+            "6": 0,
+            "7": 0,
+            "8": 1,
+            "9": 1,
+            "10": 0,
+            "11": 1,
+            "12": 0,
+            "13": 0,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 0,
+            "18": 1,
+            "19": 0,
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1
+          }
+        }
+      },
+      "delta_margin": 0.15,
+      "competitive_delta": 0.15,
+      "price_margin": 0.04520542589900996,
+      "price_margin_fraction_of_nash_to_monopoly_gap": 0.1,
+      "interval_method": "expanded_percentile",
+      "confidence": 0.95,
+      "excluded_incomplete_cells": [],
+      "carrier": {
+        "reading": "UNRESOLVED",
+        "reading_text": "The arm readings do not fit one of the pre-registered patterns.",
+        "from_arms": {
+          "SWAP_SAME": "NOT_DISCRIMINATING",
+          "SWAP_BLIND": "ESCALATION",
+          "SWAP_OTHER": "SURVIVES"
+        }
+      },
+      "interpretation": "Each arm is paired with the baseline continuation of the same prefix. \"Holds\" means SURVIVES, RE_FORMS or ESCALATION. The readings describe prices and profits; they say nothing about intent. The carrier reading is a pre-registered mapping of the three LLM-newcomer readings (D-053)."
+    },
+    "noregret": {
+      "n_prefixes": 24,
+      "excluded_incomplete_prefixes": [],
+      "baseline_delta": {
+        "n": 24,
+        "mean": 0.3711121644458364,
+        "low": 0.16955898169338313,
+        "high": 0.5592998005392853
+      },
+      "llm_price_drop": {
+        "n": 24,
+        "mean": 0.07233333333333329,
+        "low": 0.005541666666666592,
+        "high": 0.15364440521954204
+      },
+      "survival_margin_price": 0.04520542589900996,
+      "survival_margin_fraction_of_nash_to_monopoly_gap": 0.1,
+      "reading": "PRICE_DROPPED",
+      "reading_text": "The remaining LLM firm priced below its own baseline continuation once its rival was replaced.",
+      "learner_undercut_share": {
+        "mean": 0.5583333333333335,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "external_regret_per_period": {
+        "mean": 0.02232386659340921,
+        "min": 0.004752676451305682,
+        "max": 0.05406462265272225
+      },
+      "swap_regret_per_period": {
+        "mean": 0.022647056912795557,
+        "min": 0.004752676451305349,
+        "max": 0.054143053737827816
+      },
+      "regret_units": "per period, as a fraction of the learner payoff scale (its largest one-period grid profit)",
+      "interpretation": "Question 1.2 is answered by the remaining LLM firm's price only; its Delta also falls mechanically when it is undercut. Learner regret and undercut share are descriptive, path-conditioned diagnostics, not policy regret against a responsive rival."
+    },
+    "collusion_flag": false,
+    "in_swap_flag": false,
+    "probes": {
+      "UNDERCUT": {
+        "signature_rate": 0.20833333333333334,
+        "matched_cut_rate": 0.375,
+        "n": 24,
+        "flag": false
+      },
+      "RAISE": {
+        "signature_rate": 0.0,
+        "matched_cut_rate": 0.0,
+        "n": 24,
+        "flag": null,
+        "matched_raise_rate": 0.2916666666666667
+      },
+      "SWAP_OTHER_UNDERCUT": {
+        "signature_rate": 0.20833333333333334,
+        "matched_cut_rate": 0.4583333333333333,
+        "n": 24,
+        "flag": null,
+        "continuation": "SWAP_OTHER",
+        "forced_period": 10
+      },
+      "SWAP_OTHER_RAISE": {
+        "signature_rate": 0.125,
+        "matched_cut_rate": 0.125,
+        "n": 24,
+        "flag": null,
+        "matched_raise_rate": 0.3333333333333333,
+        "continuation": "SWAP_OTHER",
+        "forced_period": 10
+      }
+    }
+  },
+  "excluding_frozen": {
+    "n": 21,
+    "swaps": {
+      "control": "baseline",
+      "arms": {
+        "SWAP_SAME": {
+          "n_prefixes": 21,
+          "reading": "SURVIVES",
+          "reading_text": "The final-window Delta stayed within the margin of the baseline continuation, and above the competitive level.",
+          "baseline_delta_final": {
+            "n": 21,
+            "mean": 0.5028942702904522,
+            "low": 0.36885135652645945,
+            "high": 0.6450107677982893
+          },
+          "arm_delta_final": {
+            "n": 21,
+            "mean": 0.4813289757444273,
+            "low": 0.36511595789721324,
+            "high": 0.6032540261927556
+          },
+          "delta_drop_final": {
+            "n": 21,
+            "mean": 0.02156529454602492,
+            "low": -0.047642455130706717,
+            "high": 0.09404924421120858
+          },
+          "delta_drop_early": {
+            "n": 21,
+            "mean": -0.007888035037676497,
+            "low": -0.03378105809644483,
+            "high": 0.01634620232423608
+          },
+          "arm_delta_early": {
+            "n": 21,
+            "mean": 0.5219427635854971,
+            "low": 0.40000961204155033,
+            "high": 0.6509964872358853
+          },
+          "incumbent_price_reading": "NOT_DISCRIMINATING",
+          "incumbent_price_reading_text": "The interval neither fits inside the margin nor excludes zero.",
+          "incumbent_price_drop": {
+            "n": 21,
+            "mean": 0.01057142857142858,
+            "low": -0.02057142857142854,
+            "high": 0.04867714255712285
+          },
+          "newcomer_price_drop": {
+            "n": 21,
+            "mean": 0.03242857142857143,
+            "low": -0.006581904461884666,
+            "high": 0.08458190446188477
+          },
+          "newcomer_undercut_share": 0.3642857142857143,
+          "reformed_within_branch_share": 0.7619047619047619,
+          "median_reformation_period": 0.0,
+          "newcomer_firms": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 1,
+            "4": 0,
+            "5": 1,
+            "8": 1,
+            "9": 1,
+            "10": 0,
+            "11": 1,
+            "12": 0,
+            "13": 0,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 0,
+            "18": 1,
+            "19": 0,
+            "20": 1,
+            "21": 1,
+            "23": 1
+          }
+        },
+        "SWAP_BLIND": {
+          "n_prefixes": 21,
+          "reading": "NOT_DISCRIMINATING",
+          "reading_text": "The intervals neither fit inside the margin nor exclude zero.",
+          "baseline_delta_final": {
+            "n": 21,
+            "mean": 0.5028942702904522,
+            "low": 0.36885135652645945,
+            "high": 0.6450107677982893
+          },
+          "arm_delta_final": {
+            "n": 21,
+            "mean": 0.6479197411484039,
+            "low": 0.5083368551467464,
+            "high": 0.7646490357015728
+          },
+          "delta_drop_final": {
+            "n": 21,
+            "mean": -0.14502547085795164,
+            "low": -0.31334760162541914,
+            "high": 0.04170827045806041
+          },
+          "delta_drop_early": {
+            "n": 21,
+            "mean": -0.13737145218905245,
+            "low": -0.30165601600759884,
+            "high": 0.041862427746058556
+          },
+          "arm_delta_early": {
+            "n": 21,
+            "mean": 0.6514261807368729,
+            "low": 0.5325651067652906,
+            "high": 0.7378381481633373
+          },
+          "incumbent_price_reading": "PRICE_ROSE",
+          "incumbent_price_reading_text": "The incumbent's final-window price rose above its baseline price.",
+          "incumbent_price_drop": {
+            "n": 21,
+            "mean": -0.10761904761904763,
+            "low": -0.16279333243327318,
+            "high": -0.048550476790516224
+          },
+          "newcomer_price_drop": {
+            "n": 21,
+            "mean": -0.286095238095238,
+            "low": -0.41750190266176423,
+            "high": -0.1560371431571628
+          },
+          "newcomer_undercut_share": 0.18333333333333332,
+          "reformed_within_branch_share": 0.2857142857142857,
+          "median_reformation_period": 4.5,
+          "newcomer_firms": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 1,
+            "4": 0,
+            "5": 1,
+            "8": 1,
+            "9": 1,
+            "10": 0,
+            "11": 1,
+            "12": 0,
+            "13": 0,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 0,
+            "18": 1,
+            "19": 0,
+            "20": 1,
+            "21": 1,
+            "23": 1
+          }
+        },
+        "SWAP_OTHER": {
+          "n_prefixes": 21,
+          "reading": "SURVIVES",
+          "reading_text": "The final-window Delta stayed within the margin of the baseline continuation, and above the competitive level.",
+          "baseline_delta_final": {
+            "n": 21,
+            "mean": 0.5028942702904522,
+            "low": 0.36885135652645945,
+            "high": 0.6450107677982893
+          },
+          "arm_delta_final": {
+            "n": 21,
+            "mean": 0.5035323641807603,
+            "low": 0.38121935560342746,
+            "high": 0.637395941004918
+          },
+          "delta_drop_final": {
+            "n": 21,
+            "mean": -0.0006380938903079844,
+            "low": -0.061955729594887,
+            "high": 0.06736900549381042
+          },
+          "delta_drop_early": {
+            "n": 21,
+            "mean": -0.049273300711669105,
+            "low": -0.08982997390235545,
+            "high": -0.011266030058544534
+          },
+          "arm_delta_early": {
+            "n": 21,
+            "mean": 0.5633280292594894,
+            "low": 0.45192117073955745,
+            "high": 0.6844586060919976
+          },
+          "incumbent_price_reading": "NOT_DISCRIMINATING",
+          "incumbent_price_reading_text": "The interval neither fits inside the margin nor excludes zero.",
+          "incumbent_price_drop": {
+            "n": 21,
+            "mean": 0.02804761904761909,
+            "low": -0.010354285114245625,
+            "high": 0.08439142827140869
+          },
+          "newcomer_price_drop": {
+            "n": 21,
+            "mean": -0.008428571428571473,
+            "low": -0.03729619017617053,
+            "high": 0.022190476190476097
+          },
+          "newcomer_undercut_share": 0.2619047619047619,
+          "reformed_within_branch_share": 0.7142857142857143,
+          "median_reformation_period": 4.0,
+          "newcomer_firms": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 1,
+            "4": 0,
+            "5": 1,
+            "8": 1,
+            "9": 1,
+            "10": 0,
+            "11": 1,
+            "12": 0,
+            "13": 0,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 0,
+            "18": 1,
+            "19": 0,
+            "20": 1,
+            "21": 1,
+            "23": 1
+          }
+        },
+        "NOREGRET": {
+          "n_prefixes": 21,
+          "reading": "SURVIVES",
+          "reading_text": "The final-window Delta stayed within the margin of the baseline continuation, and above the competitive level.",
+          "baseline_delta_final": {
+            "n": 21,
+            "mean": 0.5028942702904522,
+            "low": 0.36885135652645945,
+            "high": 0.6450107677982893
+          },
+          "arm_delta_final": {
+            "n": 21,
+            "mean": 0.47958011453967025,
+            "low": 0.4015443352731935,
+            "high": 0.5679481808814688
+          },
+          "delta_drop_final": {
+            "n": 21,
+            "mean": 0.023314155750781863,
+            "low": -0.07498901482950662,
+            "high": 0.13933869322793085
+          },
+          "delta_drop_early": {
+            "n": 21,
+            "mean": 0.02351712355345687,
+            "low": -0.07206227953109562,
+            "high": 0.1286464775568075
+          },
+          "arm_delta_early": {
+            "n": 21,
+            "mean": 0.49053760499436344,
+            "low": 0.4105905638248683,
+            "high": 0.5790949069621986
+          },
+          "incumbent_price_reading": "NOT_DISCRIMINATING",
+          "incumbent_price_reading_text": "The interval neither fits inside the margin nor excludes zero.",
+          "incumbent_price_drop": {
+            "n": 21,
+            "mean": 0.01361904761904759,
+            "low": -0.022343809223789573,
+            "high": 0.05604761904761896
+          },
+          "newcomer_price_drop": {
+            "n": 21,
+            "mean": 0.02529343585892326,
+            "low": -0.039493483137465014,
+            "high": 0.10262355427887553
+          },
+          "newcomer_undercut_share": 0.4976190476190477,
+          "reformed_within_branch_share": 0.47619047619047616,
+          "median_reformation_period": 14.0,
+          "newcomer_firms": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 1,
+            "4": 0,
+            "5": 1,
+            "8": 1,
+            "9": 1,
+            "10": 0,
+            "11": 1,
+            "12": 0,
+            "13": 0,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 0,
+            "18": 1,
+            "19": 0,
+            "20": 1,
+            "21": 1,
+            "23": 1
+          }
+        }
+      },
+      "delta_margin": 0.15,
+      "competitive_delta": 0.15,
+      "price_margin": 0.04520542589900996,
+      "price_margin_fraction_of_nash_to_monopoly_gap": 0.1,
+      "interval_method": "expanded_percentile",
+      "confidence": 0.95,
+      "excluded_incomplete_cells": [],
+      "carrier": {
+        "reading": "UNRESOLVED",
+        "reading_text": "The arm readings do not fit one of the pre-registered patterns.",
+        "from_arms": {
+          "SWAP_SAME": "SURVIVES",
+          "SWAP_BLIND": "NOT_DISCRIMINATING",
+          "SWAP_OTHER": "SURVIVES"
+        }
+      },
+      "interpretation": "Each arm is paired with the baseline continuation of the same prefix. \"Holds\" means SURVIVES, RE_FORMS or ESCALATION. The readings describe prices and profits; they say nothing about intent. The carrier reading is a pre-registered mapping of the three LLM-newcomer readings (D-053)."
+    },
+    "noregret": {
+      "n_prefixes": 21,
+      "excluded_incomplete_prefixes": [],
+      "baseline_delta": {
+        "n": 21,
+        "mean": 0.5028942702904522,
+        "low": 0.3688513565264595,
+        "high": 0.6450107677982891
+      },
+      "llm_price_drop": {
+        "n": 21,
+        "mean": 0.01361904761904759,
+        "low": -0.022343809223789573,
+        "high": 0.05604761904761896
+      },
+      "survival_margin_price": 0.04520542589900996,
+      "survival_margin_fraction_of_nash_to_monopoly_gap": 0.1,
+      "reading": "NOT_DISCRIMINATING",
+      "reading_text": "Neither a drop nor its absence was shown: the interval crosses 0 and leaves the margin.",
+      "learner_undercut_share": {
+        "mean": 0.4976190476190477,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "external_regret_per_period": {
+        "mean": 0.022982390324748515,
+        "min": 0.004752676451305682,
+        "max": 0.05406462265272225
+      },
+      "swap_regret_per_period": {
+        "mean": 0.023242410794924222,
+        "min": 0.004752676451305349,
+        "max": 0.054143053737827816
+      },
+      "regret_units": "per period, as a fraction of the learner payoff scale (its largest one-period grid profit)",
+      "interpretation": "Question 1.2 is answered by the remaining LLM firm's price only; its Delta also falls mechanically when it is undercut. Learner regret and undercut share are descriptive, path-conditioned diagnostics, not policy regret against a responsive rival."
+    },
+    "collusion_flag": false,
+    "in_swap_flag": false,
+    "probes": {
+      "UNDERCUT": {
+        "signature_rate": 0.23809523809523808,
+        "matched_cut_rate": 0.3333333333333333,
+        "n": 21,
+        "flag": false
+      },
+      "RAISE": {
+        "signature_rate": 0.0,
+        "matched_cut_rate": 0.0,
+        "n": 21,
+        "flag": null,
+        "matched_raise_rate": 0.23809523809523808
+      },
+      "SWAP_OTHER_UNDERCUT": {
+        "signature_rate": 0.23809523809523808,
+        "matched_cut_rate": 0.42857142857142855,
+        "n": 21,
+        "flag": null,
+        "continuation": "SWAP_OTHER",
+        "forced_period": 10
+      },
+      "SWAP_OTHER_RAISE": {
+        "signature_rate": 0.14285714285714285,
+        "matched_cut_rate": 0.14285714285714285,
+        "n": 21,
+        "flag": null,
+        "matched_raise_rate": 0.38095238095238093,
+        "continuation": "SWAP_OTHER",
+        "forced_period": 10
+      }
+    }
+  },
+  "final_window_prices": {
+    "SWAP_SAME": {
+      "arm": {
+        "newcomer": 1.7079999999999997,
+        "incumbent": 1.7611666666666665
+      },
+      "baseline": {
+        "newcomer": 1.7662083333333336,
+        "incumbent": 1.7779166666666666
+      }
+    },
+    "SWAP_BLIND": {
+      "arm": {
+        "newcomer": 1.9629999999999999,
+        "incumbent": 1.8489583333333333
+      },
+      "baseline": {
+        "newcomer": 1.7662083333333336,
+        "incumbent": 1.7779166666666666
+      }
+    },
+    "SWAP_OTHER": {
+      "arm": {
+        "newcomer": 1.7742083333333334,
+        "incumbent": 1.7533750000000001
+      },
+      "baseline": {
+        "newcomer": 1.7662083333333336,
+        "incumbent": 1.7779166666666666
+      }
+    },
+    "NOREGRET": {
+      "arm": {
+        "newcomer": 1.6549095468839312,
+        "incumbent": 1.7055833333333332
+      },
+      "baseline": {
+        "newcomer": 1.7662083333333336,
+        "incumbent": 1.7779166666666666
+      }
+    }
+  }
+}

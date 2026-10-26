@@ -1,0 +1,49 @@
+{
+  "arm": "R2",
+  "status": "SUPPORTED",
+  "removal": 1.0,
+  "removal_low": 1.0,
+  "removal_high": 1.0,
+  "removal_sd": 0.0,
+  "n_prefixes": 10,
+  "excluded_incomplete_prefixes": [],
+  "baseline_delta": 1.0,
+  "baseline_delta_low": 1.0,
+  "baseline_delta_high": 1.0,
+  "treated_delta": 0.0,
+  "feasibility_min_delta": 0.0,
+  "confidence": 0.95,
+  "interval_method": "expanded_percentile",
+  "consumer_harm_removed": {
+    "mean": 1.0,
+    "low": 1.0,
+    "high": 1.0
+  },
+  "sham_removal": {
+    "mean": 0.0,
+    "low": 0.0,
+    "high": 0.0
+  },
+  "removal_beyond_sham": {
+    "mean": 1.0,
+    "low": 1.0,
+    "high": 1.0
+  },
+  "excluding_carried": {
+    "n": 10,
+    "removal": 1.0,
+    "low": 1.0,
+    "high": 1.0,
+    "prefixes_with_carried_decisions": []
+  },
+  "high_stratum": {
+    "n": 10,
+    "removal": 1.0,
+    "low": 1.0,
+    "high": 1.0,
+    "stratum_threshold": 0.5
+  },
+  "reading": "SUPPORTED_BEYOND_SHAM",
+  "reading_text": "Hiding rival prices lowered Delta by more than an information-preserving column removal: coordination through the explicit rival-price display.",
+  "interpretation": "Paired drop in the Calvano index caused by imposing the restriction at the fork; not evidence about intent."
+}

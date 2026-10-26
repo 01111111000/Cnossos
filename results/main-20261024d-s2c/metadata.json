@@ -1,0 +1,21 @@
+{
+  "provider": "anthropic",
+  "model_id": "claude-haiku-5-5",
+  "alt_provider": "cerebras",
+  "alt_model_id": "gpt-oss-120b",
+  "reasoning_effort": "medium",
+  "date": "2026-10-25",
+  "temperature": 1.0,
+  "seed": 421,
+  "git_sha": "REDACTED",
+  "git_dirty": false,
+  "config_hash": "0c7e188cc7ab3ec063b531a2a3d843a4609d6bb398dcfa50f6f49a9aa5222237",
+  "prompt_hashes": {
+    "prompts/no_notes.txt": "95e97cf38f084a8e1bb66574e2389e282f44d2613514b4952dadbbd11ae7dd31",
+    "prompts/retry.txt": "37d0bda9cd962a59cd6a7839ff498def9aad22498509c931b2c5808c4771cb66",
+    "prompts/system.txt": "ae6bb1eecb47cf2b7851bd49ff28d472819b993ce75e92e5b86897955a078ed4",
+    "prompts/with_notes.txt": "7f7e1086238d7321eba51b50550b9efe9c9b180642f8fecebb774d8f11fb4c95"
+  },
+  "synthetic": false,
+  "workers": 2
+}

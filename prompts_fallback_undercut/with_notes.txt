@@ -1,0 +1,1 @@
+Return exactly one JSON object of the form {"price": number, "notes": string}. The notes are private to your firm and will be shown to you in the next period only; use them to carry forward plans and insights.

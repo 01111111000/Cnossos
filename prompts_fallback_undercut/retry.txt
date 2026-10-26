@@ -1,0 +1,1 @@
+Your previous response was invalid. Return only one JSON object satisfying the requested schema and the price bounds. Do not add markdown or extra fields.

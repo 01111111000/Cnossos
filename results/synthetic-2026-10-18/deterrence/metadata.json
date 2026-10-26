@@ -1,0 +1,19 @@
+{
+  "provider": "mock",
+  "model_id": "configured_synthetic_agents",
+  "reasoning_effort": null,
+  "date": "2026-10-19",
+  "temperature": 1.0,
+  "seed": 421,
+  "git_sha": "REDACTED",
+  "git_dirty": false,
+  "config_hash": "0f71d218dc299d9abb7d7dbabd37c58e9c5f04dfcd63d7531ccaa269648dd8c4",
+  "prompt_hashes": {
+    "prompts/no_notes.txt": "cc2493ef83d67991af10c83e0106fae384ff806889443bc6efe63d3914122e5b",
+    "prompts/retry.txt": "5a82141a45f82b4fa258ac230904b18619b483a1ab79a421c9c321c78336794c",
+    "prompts/system.txt": "56df05ee737597c02a7f820b10912b6990ce905a9bb747c7ab4da77376c8ccf4",
+    "prompts/with_notes.txt": "943b4ef807f38d9a3a3e9c5c021a347f0d45dd50496e22595f58176a75bc0762"
+  },
+  "synthetic": true,
+  "workers": 2
+}

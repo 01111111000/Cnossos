@@ -1,0 +1,42 @@
+{
+  "run": "results\\smoke-20261024",
+  "status": "FAIL",
+  "checks": {
+    "valid": false,
+    "carried": false,
+    "truncated": true
+  },
+  "thresholds": {
+    "max_carried": 0.02,
+    "max_truncated": 0.02,
+    "min_valid": 0.95
+  },
+  "decisions": 784,
+  "attempts": 844,
+  "valid_decision_rate": 0.923469387755102,
+  "first_attempt_valid_rate": 0.923469387755102,
+  "carried_decision_rate": 0.07653061224489796,
+  "truncated_attempt_rate": 0.0,
+  "failure_kinds": {
+    "HTTP 403": 120
+  },
+  "models_reported": [
+    "claude-haiku-5-5"
+  ],
+  "finish_reasons": {
+    "end_turn": 724
+  },
+  "backoffs_total": 0,
+  "mean_prompt_tokens": 1998.5276243093922,
+  "mean_completion_tokens": 314.0317679558011,
+  "p95_completion_tokens": 772.5500000000001,
+  "mean_reasoning_tokens": null,
+  "cached_prompt_share": null,
+  "mean_provider_seconds": null,
+  "estimated_spend_usd": 0.2583729,
+  "rerun_budget_with": "make budget OUTPUT_TOKENS=314",
+  "descriptive_only_prefix_delta": {
+    "0": 0.301,
+    "1": 0.861
+  }
+}

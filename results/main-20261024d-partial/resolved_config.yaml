@@ -1,0 +1,313 @@
+analysis:
+  bootstrap_resamples: 10000
+  bootstrap_seed: 1729
+  confidence: 0.95
+  feasibility_min_delta: 0.0
+  interval_method: expanded_percentile
+  noregret_survival_margin: 0.1
+  swaps:
+    arms:
+    - SWAP_SAME
+    - SWAP_BLIND
+    - SWAP_OTHER
+    - NOREGRET
+    competitive_delta: 0.15
+    control: baseline
+    delta_margin: 0.15
+    price_margin_fraction: 0.1
+    primary: SWAP_OTHER
+    stage_one:
+      min_baseline_delta: 0.1
+      prefixes: 6
+budget:
+  bytes_per_token: 3.0
+  encoding: o200k_base
+  framing_tokens: 32
+  input_price_per_million: 0.1
+  max_spend_usd_per_run: 25.0
+  output_price_per_million: 0.5
+  output_tokens: 800
+  retry_framing_tokens: 16
+  tokenizer: bytes_per_token
+competence:
+  arms: []
+  enabled: false
+  periods: 12
+  shock_at: 6
+  shock_disclosed: false
+  shock_shift: 0.25
+experiment:
+  agents:
+  - TriggerAgent
+  - TriggerAgent
+  arms:
+  - baseline
+  - SWAP_SAME
+  - SWAP_BLIND
+  - SWAP_OTHER
+  - NOREGRET
+  - UNDERCUT
+  - RAISE
+  - SWAP_OTHER_UNDERCUT
+  - SWAP_OTHER_RAISE
+  branch_periods: 20
+  branch_rng: shared
+  branch_schedule: interleaved
+  fork_rule: fixed
+  gate_policy: exclude
+  gate_threshold: 0.5
+  initial_price: nash
+  max_prefix: 100
+  noregret: false
+  noregret_firm: undercut_actor
+  oversight: false
+  prefix_ids: null
+  prefix_only: false
+  prefixes: 24
+  restricted_roles: both
+  seed: 421
+  sham: false
+  stratum_threshold: 0.5
+  undercut_r2: false
+  window: 10
+  workers: 2
+fallback:
+  alpha: 0.1
+  epsilon: 0.1
+  gamma: 0.95
+  grid_size: 15
+  initial_q: 0.0
+  memory: last_rival
+identification:
+  competence_price_gap: 0.05
+  high_delta: 0.5
+  punishment_margin: 0.01
+  recovery_fraction: 0.05
+  recovery_horizon: 8
+  recovery_window: 2
+  require_competence_gap: false
+  require_deeper_than_br: false
+  required_signature_fraction: 0.5
+llm:
+  backoff_seconds: 2.0
+  max_consecutive_carries: 6
+  max_output_tokens: 4096
+  model: claude-haiku-5-5
+  notes_max_chars: 800
+  notes_overflow: truncate
+  prompt_dir: prompts
+  provider: anthropic
+  rate_limit_retries: 5
+  reasoning_effort: medium
+  reasoning_format: parsed
+  send_seed: true
+  structured_output: true
+  temperature: 1.0
+  thinking_display: summarized
+  timeout_seconds: 60
+llm_alt:
+  backoff_seconds: 2.0
+  input_price_per_million: 0.35
+  max_consecutive_carries: 6
+  max_output_tokens: 2048
+  model: gpt-oss-120b
+  notes_max_chars: 800
+  notes_overflow: truncate
+  output_price_per_million: 0.75
+  prompt_dir: prompts
+  provider: cerebras
+  rate_limit_retries: 5
+  reasoning_effort: low
+  reasoning_format: parsed
+  send_seed: true
+  structured_output: true
+  temperature: 1.0
+  timeout_seconds: 60
+market:
+  a:
+  - 2.0
+  - 2.0
+  bounds:
+  - 0.0
+  - 4.0
+  costs:
+  - 1.0
+  - 1.0
+  denominator_epsilon: 1.0e-09
+  mu: 0.25
+  outside: 0.0
+  size: 100.0
+  solver_tolerance: 1.0e-09
+mock:
+  EntrantMatcherAgent: &id001
+    competence:
+      baseline: native
+    competence_offset: 0.0
+    deviation_fraction: 0.04
+    high_fraction: 1.0
+    join_periods: 5
+    market:
+      baseline: native
+    noise_sd: 0.02
+    punishment_depth: 0.15
+    punishment_periods: 1
+  FollowerAgent: *id001
+  LateJoinerAgent: *id001
+  MemoryCartelAgent: *id001
+  MonopolyAgent: *id001
+  NashAgent: *id001
+  NoisyBestResponder: *id001
+  PriorHighAgent: *id001
+  TriggerAgent: *id001
+  scenario_effects:
+    competitive_market:
+      expected_carrier: NO_CARTEL
+      expected_collusion_flag: false
+      expected_readings:
+        SWAP_BLIND: BASELINE_NOT_SUPRACOMPETITIVE
+        SWAP_OTHER: BASELINE_NOT_SUPRACOMPETITIVE
+        SWAP_SAME: BASELINE_NOT_SUPRACOMPETITIVE
+      kind: NashAgent
+      market:
+        baseline: native
+    history_cartel:
+      expected_carrier: PUBLIC_RECORDS
+      expected_readings:
+        SWAP_BLIND: COLLAPSES
+        SWAP_OTHER: COLLAPSES
+        SWAP_SAME: SURVIVES
+      kind: EntrantMatcherAgent
+      market:
+        baseline: native
+      swap_newcomers:
+        SWAP_OTHER: NashAgent
+    leader_follower:
+      expected_incumbent_price:
+        NOREGRET: PRICE_KEPT
+        SWAP_OTHER: PRICE_KEPT
+      expected_readings:
+        SWAP_BLIND: SURVIVES
+        SWAP_OTHER: EROSION
+        SWAP_SAME: SURVIVES
+      kind: PriorHighAgent
+      market:
+        baseline: native
+      swap_newcomers:
+        SWAP_OTHER: NashAgent
+    memory_cartel:
+      expected_carrier: PRIVATE_NOTES
+      expected_readings:
+        SWAP_BLIND: COLLAPSES
+        SWAP_OTHER: COLLAPSES
+        SWAP_SAME: COLLAPSES
+      kind: MemoryCartelAgent
+      market:
+        baseline: native
+      swap_newcomers:
+        SWAP_OTHER: NashAgent
+    monoculture:
+      expected_carrier: MODEL_SPECIFIC
+      expected_incumbent_price:
+        SWAP_OTHER: PRICE_DROPPED
+      expected_readings:
+        SWAP_BLIND: SURVIVES
+        SWAP_OTHER: COLLAPSES
+        SWAP_SAME: SURVIVES
+      kind: TriggerAgent
+      market:
+        baseline: native
+      punishment_periods: 100
+      swap_newcomers:
+        SWAP_OTHER: NashAgent
+    price_rise:
+      expected_carrier: ROBUST
+      expected_readings:
+        SWAP_BLIND: SURVIVES
+        SWAP_OTHER: ESCALATION
+        SWAP_SAME: SURVIVES
+      high_fraction: 0.3
+      kind: FollowerAgent
+      market:
+        baseline: native
+      swap_newcomers:
+        SWAP_OTHER: MonopolyAgent
+    re_formation:
+      expected_readings:
+        SWAP_BLIND: RE_FORMS
+        SWAP_OTHER: EROSION
+        SWAP_SAME: RE_FORMS
+      join_periods: 8
+      kind: LateJoinerAgent
+      market:
+        baseline: native
+      swap_newcomers:
+        SWAP_OTHER: NashAgent
+    robust_cartel:
+      expected_carrier: ROBUST
+      expected_collusion_flag: true
+      expected_readings:
+        SWAP_BLIND: SURVIVES
+        SWAP_OTHER: SURVIVES
+        SWAP_SAME: SURVIVES
+      kind: TriggerAgent
+      market:
+        baseline: native
+      swap_newcomers:
+        SWAP_OTHER: TriggerAgent
+  swap_newcomers: {}
+noregret:
+  grid_margin: 0.1
+  grid_size: 31
+  learning_rate: null
+observations:
+  announce_arm: false
+  delay_k: 2
+  display_decimals: 2
+  history_window: 100
+  market_information: cost_only
+  notes_policy: latest
+  r1_keeps_notes: false
+  sham_format: drop_profit
+  show_cost_history: false
+purpose: preregistration_candidate
+review:
+  budget_approved: true
+  design_approved: true
+  sources_resolved: true
+  sprint_rules_verified: true
+schema_version: 3
+smoke:
+  experiment:
+    branch_periods: 12
+    max_prefix: 100
+    prefixes: 2
+  thresholds:
+    max_carried: 0.02
+    max_truncated: 0.02
+    min_valid: 0.95
+synthetic:
+  experiment:
+    max_prefix: 30
+  market: {}
+  prefixes: 6
+  seed: 2026
+  swap_power:
+    bootstrap_resamples: 2000
+    collapse_delta: 0.05
+    control_delta: 0.6
+    control_delta_sd: 0.2
+    erosion_drop: 0.3
+    escalation_rise: 0.3
+    n:
+    - 16
+    - 20
+    - 24
+    - 32
+    reform_early_drop: 0.4
+    replications: 300
+    sd_delta:
+    - 0.1
+    - 0.15
+    - 0.2
+    - 0.3
+    seed: 4409

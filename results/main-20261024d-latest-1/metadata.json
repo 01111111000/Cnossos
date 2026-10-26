@@ -1,0 +1,141 @@
+{
+  "provider": "anthropic",
+  "model_id": "claude-haiku-5-5",
+  "alt_provider": "cerebras",
+  "alt_model_id": "gpt-oss-120b",
+  "reasoning_effort": "medium",
+  "date": "2026-10-25",
+  "temperature": 1.0,
+  "seed": 421,
+  "git_sha": "REDACTED",
+  "git_dirty": false,
+  "config_hash": "03c0b7b16d6a2261b74e535b83f8388437139ed58e9a47f159758d42770e0740",
+  "prompt_hashes": {
+    "prompts/no_notes.txt": "95e97cf38f084a8e1bb66574e2389e282f44d2613514b4952dadbbd11ae7dd31",
+    "prompts/retry.txt": "37d0bda9cd962a59cd6a7839ff498def9aad22498509c931b2c5808c4771cb66",
+    "prompts/system.txt": "ae6bb1eecb47cf2b7851bd49ff28d472819b993ce75e92e5b86897955a078ed4",
+    "prompts/with_notes.txt": "7f7e1086238d7321eba51b50550b9efe9c9b180642f8fecebb774d8f11fb4c95"
+  },
+  "synthetic": false,
+  "workers": 2,
+  "merged_from": [
+    "results/main-20261024d-s1",
+    "results/main-20261024d-s2a",
+    "results/main-20261024d-s2a2",
+    "results/main-20261024d-s2b2"
+  ],
+  "source_metadata": [
+    {
+      "provider": "anthropic",
+      "model_id": "claude-haiku-5-5",
+      "alt_provider": "cerebras",
+      "alt_model_id": "gpt-oss-120b",
+      "reasoning_effort": "medium",
+      "date": "2026-10-25",
+      "temperature": 1.0,
+      "seed": 421,
+      "git_sha": "REDACTED",
+      "git_dirty": false,
+      "config_hash": "03c0b7b16d6a2261b74e535b83f8388437139ed58e9a47f159758d42770e0740",
+      "prompt_hashes": {
+        "prompts/no_notes.txt": "95e97cf38f084a8e1bb66574e2389e282f44d2613514b4952dadbbd11ae7dd31",
+        "prompts/retry.txt": "37d0bda9cd962a59cd6a7839ff498def9aad22498509c931b2c5808c4771cb66",
+        "prompts/system.txt": "ae6bb1eecb47cf2b7851bd49ff28d472819b993ce75e92e5b86897955a078ed4",
+        "prompts/with_notes.txt": "7f7e1086238d7321eba51b50550b9efe9c9b180642f8fecebb774d8f11fb4c95"
+      },
+      "synthetic": false,
+      "workers": 2
+    },
+    {
+      "provider": "anthropic",
+      "model_id": "claude-haiku-5-5",
+      "alt_provider": "cerebras",
+      "alt_model_id": "gpt-oss-120b",
+      "reasoning_effort": "medium",
+      "date": "2026-10-25",
+      "temperature": 1.0,
+      "seed": 421,
+      "git_sha": "REDACTED",
+      "git_dirty": false,
+      "config_hash": "0b66ebf43e3ca6011fec0e1883a17d03fb3bd2f4172fc750c81cb31f997e4bd5",
+      "prompt_hashes": {
+        "prompts/no_notes.txt": "95e97cf38f084a8e1bb66574e2389e282f44d2613514b4952dadbbd11ae7dd31",
+        "prompts/retry.txt": "37d0bda9cd962a59cd6a7839ff498def9aad22498509c931b2c5808c4771cb66",
+        "prompts/system.txt": "ae6bb1eecb47cf2b7851bd49ff28d472819b993ce75e92e5b86897955a078ed4",
+        "prompts/with_notes.txt": "7f7e1086238d7321eba51b50550b9efe9c9b180642f8fecebb774d8f11fb4c95"
+      },
+      "synthetic": false,
+      "workers": 2
+    },
+    {
+      "provider": "anthropic",
+      "model_id": "claude-haiku-5-5",
+      "alt_provider": "cerebras",
+      "alt_model_id": "gpt-oss-120b",
+      "reasoning_effort": "medium",
+      "date": "2026-10-25",
+      "temperature": 1.0,
+      "seed": 421,
+      "git_sha": "REDACTED",
+      "git_dirty": false,
+      "config_hash": "3a62c4e685fc58f4f25c2815dacc61f1258e4d49bc9c01c087ebde1c86875362",
+      "prompt_hashes": {
+        "prompts/no_notes.txt": "95e97cf38f084a8e1bb66574e2389e282f44d2613514b4952dadbbd11ae7dd31",
+        "prompts/retry.txt": "37d0bda9cd962a59cd6a7839ff498def9aad22498509c931b2c5808c4771cb66",
+        "prompts/system.txt": "ae6bb1eecb47cf2b7851bd49ff28d472819b993ce75e92e5b86897955a078ed4",
+        "prompts/with_notes.txt": "7f7e1086238d7321eba51b50550b9efe9c9b180642f8fecebb774d8f11fb4c95"
+      },
+      "synthetic": false,
+      "workers": 2
+    },
+    {
+      "provider": "anthropic",
+      "model_id": "claude-haiku-5-5",
+      "alt_provider": "cerebras",
+      "alt_model_id": "gpt-oss-120b",
+      "reasoning_effort": "medium",
+      "date": "2026-10-25",
+      "temperature": 1.0,
+      "seed": 421,
+      "git_sha": "REDACTED",
+      "git_dirty": false,
+      "config_hash": "b5e50eae0936dbd908d22e31c110978ccc69d9fcb47b6a02f9c2929de9a819e5",
+      "prompt_hashes": {
+        "prompts/no_notes.txt": "95e97cf38f084a8e1bb66574e2389e282f44d2613514b4952dadbbd11ae7dd31",
+        "prompts/retry.txt": "37d0bda9cd962a59cd6a7839ff498def9aad22498509c931b2c5808c4771cb66",
+        "prompts/system.txt": "ae6bb1eecb47cf2b7851bd49ff28d472819b993ce75e92e5b86897955a078ed4",
+        "prompts/with_notes.txt": "7f7e1086238d7321eba51b50550b9efe9c9b180642f8fecebb774d8f11fb4c95"
+      },
+      "synthetic": false,
+      "workers": 2
+    }
+  ],
+  "prefix_sources": {
+    "0": "results/main-20261024d-s1",
+    "1": "results/main-20261024d-s1",
+    "2": "results/main-20261024d-s1",
+    "3": "results/main-20261024d-s1",
+    "4": "results/main-20261024d-s1",
+    "5": "results/main-20261024d-s1",
+    "6": "results/main-20261024d-s2a",
+    "7": "results/main-20261024d-s2a",
+    "8": "results/main-20261024d-s2a",
+    "9": "results/main-20261024d-s2a",
+    "10": "results/main-20261024d-s2a2",
+    "11": "results/main-20261024d-s2a2",
+    "12": "results/main-20261024d-s2b2",
+    "13": "results/main-20261024d-s2b2",
+    "14": "results/main-20261024d-s2b2",
+    "15": "results/main-20261024d-s2b2",
+    "16": "results/main-20261024d-s2b2",
+    "17": "results/main-20261024d-s2b2"
+  },
+  "missing_prefixes": [
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ]
+}

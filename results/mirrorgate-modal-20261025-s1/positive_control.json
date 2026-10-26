@@ -1,0 +1,46 @@
+{
+  "run": "results\\mirrorgate-modal-20261025-s1",
+  "status": "PROCEED",
+  "prefixes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "incomplete_cells": [],
+  "baseline_final_window_delta": {
+    "mean": 0.6494608107662238,
+    "sd": 0.4412857384144033,
+    "projected_lower_bound": 0.46312218578730924,
+    "by_prefix": {
+      "0": 0.964,
+      "1": 0.839,
+      "2": 0.964,
+      "3": 0.069,
+      "4": 0.098,
+      "5": 0.964
+    }
+  },
+  "pre_fork_delta_by_prefix": {
+    "0": 0.964,
+    "1": 0.781,
+    "2": 0.964,
+    "3": 0.059,
+    "4": 0.098,
+    "5": 0.964
+  },
+  "gates": {},
+  "gate_projection": {
+    "full_run_prefixes": 24,
+    "multiplier": 2.0686576104190486
+  },
+  "baseline_movement_ratio": null,
+  "baseline_markup": 0.8108333333333334,
+  "min_baseline_delta": 0.1,
+  "primary_for_stage_two": "NOREGRET",
+  "primary_changed": false,
+  "design_hash": "53c3a14eee253b777cdef6881344947e2bcbb2de16461e7445c283f93a7b52f7",
+  "note": "Baseline arm and prefix phase only; no notice or probe arm was read."
+}

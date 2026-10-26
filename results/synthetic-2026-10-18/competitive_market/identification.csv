@@ -1,0 +1,25 @@
+prefix_id,probe,continuation,observer,pre_price,competence_pre_shock_price,prefix_price_gap,high_delta,actual_downward_deviation,deeper_than_br,matched_cut,recovered,punishment_signature,forced_period,recovery_reference,deviation_gain,actual_upward_deviation,matched_raise
+0,UNDERCUT,baseline,1,1.481701960451377,,,False,True,False,False,True,False,0,matched continuation,-0.3635822205606587,,
+0,RAISE,baseline,1,1.481701960451377,,,False,,False,False,True,False,0,matched continuation,-3.447116732586238,True,False
+0,SCREEN_VAR_UNDERCUT,SCREEN_VAR,1,1.481701960451377,,,False,True,False,False,True,False,10,matched continuation,-0.034440408703659386,,
+0,SCREEN_VAR_RAISE,SCREEN_VAR,1,1.481701960451377,,,False,,False,False,True,False,10,matched continuation,-0.4503619831067738,True,False
+1,UNDERCUT,baseline,1,1.4633547132819806,,,False,False,False,False,True,False,0,matched continuation,-0.03133386550379669,,
+1,RAISE,baseline,1,1.4633547132819806,,,False,,False,False,True,False,0,matched continuation,-0.03133386550379669,True,False
+1,SCREEN_VAR_UNDERCUT,SCREEN_VAR,1,1.4633547132819806,,,False,False,False,False,True,False,10,matched continuation,-0.2500922373697847,,
+1,SCREEN_VAR_RAISE,SCREEN_VAR,1,1.4633547132819806,,,False,,False,False,True,False,10,matched continuation,-0.2500922373697847,True,False
+2,UNDERCUT,baseline,0,1.4951728605953487,,,False,False,False,False,True,False,0,matched continuation,0.0,,
+2,RAISE,baseline,0,1.4951728605953487,,,False,,False,False,True,False,0,matched continuation,0.0,False,False
+2,SCREEN_VAR_UNDERCUT,SCREEN_VAR,0,1.4951728605953487,,,False,True,False,False,True,False,10,matched continuation,-0.13604508878057686,,
+2,SCREEN_VAR_RAISE,SCREEN_VAR,0,1.4951728605953487,,,False,,False,False,True,False,10,matched continuation,-1.6383251576628766,True,False
+3,UNDERCUT,baseline,1,1.4451250157644193,,,False,False,False,False,True,False,0,matched continuation,-0.13698348164516005,,
+3,RAISE,baseline,1,1.4451250157644193,,,False,,False,False,True,False,0,matched continuation,-0.13698348164516005,True,False
+3,SCREEN_VAR_UNDERCUT,SCREEN_VAR,1,1.4451250157644193,,,False,False,False,False,True,False,10,matched continuation,-0.4377017799914995,,
+3,SCREEN_VAR_RAISE,SCREEN_VAR,1,1.4451250157644193,,,False,,False,False,True,False,10,matched continuation,-0.4377017799914995,True,False
+4,UNDERCUT,baseline,0,1.4678851793977075,,,False,False,False,False,True,False,0,matched continuation,0.0,,
+4,RAISE,baseline,0,1.4678851793977075,,,False,,False,False,True,False,0,matched continuation,0.0,False,False
+4,SCREEN_VAR_UNDERCUT,SCREEN_VAR,0,1.4678851793977075,,,False,True,False,False,True,False,10,matched continuation,-0.6346657775222297,,
+4,SCREEN_VAR_RAISE,SCREEN_VAR,0,1.4678851793977075,,,False,,False,False,True,False,10,matched continuation,-5.471690715045497,True,False
+5,UNDERCUT,baseline,1,1.481530929743745,,,False,False,False,False,True,False,0,matched continuation,-0.03765702567017115,,
+5,RAISE,baseline,1,1.481530929743745,,,False,,False,False,True,False,0,matched continuation,-0.03765702567017115,True,False
+5,SCREEN_VAR_UNDERCUT,SCREEN_VAR,1,1.481530929743745,,,False,False,False,False,True,False,10,matched continuation,-0.2500922373697563,,
+5,SCREEN_VAR_RAISE,SCREEN_VAR,1,1.481530929743745,,,False,,False,False,True,False,10,matched continuation,-0.2500922373697563,True,False
